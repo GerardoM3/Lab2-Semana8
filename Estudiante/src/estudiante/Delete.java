@@ -31,7 +31,7 @@ public class Delete {
             System.out.println("Registro borrado satisfactoriamente!");
         }
         
-        MenuPrincipal.desplegarmMenu();
+        MenuPrincipal.desplegarMenu();
         
     }
     
