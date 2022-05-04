@@ -4,6 +4,19 @@ package estudiante;
 import java.sql.*;
 
 public class ConexionCRUD {
+    //Marjorie Beatriz Ramírez Morales
+    public ConexionCRUD(){
+        try{
+            Class.forName(driverConector);
+            conexion = DriverManager.getConnection(servidor, usuario, clave);
+        }catch(ClassNotFoundException | SQLException e){
+            System.out.println("Conexión fallida! Error!: " + e.getMessage());
+        }
+    }
+    //Marjorie Beatriz Ramírez Morales
+    public Connection getConnection(){
+        return conexion;
+    }
     
     // Morena Guadalupe Peña Flores
     public void guardaeRegistros(String tabla, String camposTabla, String valoresCampos) {
