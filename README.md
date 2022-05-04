@@ -1,5 +1,9 @@
-# Lab2-Semana8
+﻿# Lab2-Semana8
 # SIS21A
+
+		#Nota importante: En caso de que no funcione la conexión mysql, considere cambiar el puerto.
+		#El puerto de la máquina en la que se probó es 8080. Pero en el proyecto quedó el puerto 3306.
+
 		Distribución del trabajo
 Morena Guadalupe Peña Flores
 - Métodos guardarRegistros y actualizarEliminarRegistro dentro 
