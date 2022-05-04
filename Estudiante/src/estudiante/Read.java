@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class Read {
     public Read() throws SQLException{
         System.out.println("<< CONSULTA DE REGISTROS >>");
-        mostrarResultados();
+        mostrarResultado();
     }
     
     private void mostrarResultado() throws SQLException{

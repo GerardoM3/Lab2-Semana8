@@ -20,11 +20,11 @@ public class Create {
         est.setApellidoEstudiante(leer.nextLine());
         
         System.out.println("Edad del estudiante: ");
-        est.setEdadEstudiante(leer.nextLine());
+        est.setEdadEstudiante(Integer.parseInt(leer.nextLine()));
         
         String tabla = "tb_estudiante";
-        String camposTabla = "carnet, nombre, apellido, edad";
-        String valoresCampos = "'" + est.getCarnetEstudiante() + "','" + est.getNombreEstudiante()+ "','" + est.getApellidoEstudiante()+ "','" + est.getEdadEstudiante() + "'";
+        String camposTabla = "carnet_estudiante, nom_estudiante, ape_estudiante, edad_estudiante";
+        String valoresCampos = "'" + est.getCarnetEstudiante() + "','" + est.getNombreEstudiante()+ "','" + est.getApellidoEstudiante()+ "'," + est.getEdadEstudiante() + "";
         
         ConexionCRUD utilerias = new ConexionCRUD();
         utilerias.guardaeRegistros(tabla, camposTabla, valoresCampos);

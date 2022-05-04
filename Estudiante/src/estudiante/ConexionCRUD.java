@@ -6,7 +6,7 @@ import java.sql.*;
 public class ConexionCRUD {
     //Marjorie Beatriz Ramírez Morales
     
-    private final String servidor = "jdbc:mysql://localhost/bd_estudiantes";
+    private final String servidor = "jdbc:mysql://localhost:3306/bd_estudiantes";
     private final String usuario = "root";
     private final String clave = "";
     private final String driverConector = "com.mysql.jdbc.Driver";
@@ -32,7 +32,7 @@ public class ConexionCRUD {
         Connection cone = conectar.getConnection();
         try{
             
-            String sqlQueryStmt = "INSERT INFO " + tabla + " (" + camposTabla + ") VALUE (" +valoresCampos + "); ";
+            String sqlQueryStmt = "INSERT INTO " + tabla + " (" + camposTabla + ") VALUE (" +valoresCampos + "); ";
             
             Statement stmt;
             stmt = cone.createStatement();
@@ -57,7 +57,7 @@ public class ConexionCRUD {
             String sqlQueryStmt;
             
             if(valoresCamposNuevos.isEmpty()){
-                sqlQueryStmt = "DELETE FROM " + " WHERE " + condicion + ";";
+                sqlQueryStmt = "DELETE FROM " + tabla +" WHERE " + condicion + ";";
             }else{
               sqlQueryStmt = " UPDATE " +tabla + " SET " + valoresCamposNuevos + " WHERE " + condicion +";";
             }

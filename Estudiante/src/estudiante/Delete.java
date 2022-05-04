@@ -18,10 +18,10 @@ public class Delete {
         String tabla = "tb_estudiante";
         String campos = "*";
         String condicion = "id_estudiante = " + idEstudianteEliminar;
-        utilerias.desplegarRegistros(tabla, campos, condiciion);
+        utilerias.desplegarRegistros(tabla, campos, condicion);
         
         System.out.println("Presionar << Y >> para confirmar");
-        String confirmarBorrar = leer.next();
+        String confirmarBorrar = leer.next().toUpperCase();
         
         if ("Y". equals(confirmarBorrar)){
             

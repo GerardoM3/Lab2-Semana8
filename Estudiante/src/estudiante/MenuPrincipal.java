@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 // Marlin Yessenia González López
 public class MenuPrincipal {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException{
         desplegarMenu();
     }
     

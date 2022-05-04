@@ -13,10 +13,10 @@ public class Update {
         System.out.println("<< ACTUALIZAR REGISTROS >>");
         
         System.out.println("Ingresar el id del estudiante a modificar: ");
-        est.setIdPersona(leer.nextInt());
+        est.setIdEstudiante(leer.nextInt());
         
         String tablaBuscar = "tb_estudiante";
-        String camposBuscar = "id_estudiante, carnet, nombre, apellido, edad";
+        String camposBuscar = "id_estudiante, carnet_estudiante, nom_estudiante, ape_estudiante, edad_estudiante";
         String condicionBuscar = "id_estudiante = " + est.getIdEstudiante();
         utilerias.desplegarRegistros(tablaBuscar, camposBuscar, condicionBuscar);
         
@@ -30,10 +30,10 @@ public class Update {
         est.setApellidoEstudiante(leer.next());
         
         System.out.println("Edad del estudiante: ");
-        est.setEdadEstudiante(leer.next());
+        est.setEdadEstudiante(Integer.parseInt(leer.next()));
         
         String tabla = "tb_estudiante";
-        String camposValoresNuevos = "carnet = '" + est.getCarnetEstudiante + "nombre = '" + est.getNombreEstudiante() + "', apellido = '" + est.getApellidoEstudiante() + "', edad = '" + est.getEdadEstudiante() + "'";
+        String camposValoresNuevos = "carnet_estudiante = '" + est.getCarnetEstudiante() + "', nom_estudiante = '" + est.getNombreEstudiante() + "', ape_estudiante = '" + est.getApellidoEstudiante() + "', edad_estudiante = " + est.getEdadEstudiante();
         utilerias.actualizarEliminarRegistro(tabla, camposValoresNuevos, condicionBuscar);
         
         System.out.println("Modificado correctamente!");
