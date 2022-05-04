@@ -5,6 +5,13 @@ import java.sql.*;
 
 public class ConexionCRUD {
     //Marjorie Beatriz Ramírez Morales
+    
+    private final String servidor = "jdbc:mysql://localhost/bd_estudiantes";
+    private final String usuario = "root";
+    private final String clave = "";
+    private final String driverConector = "com.mysql.jdbc.Driver";
+    private static Connection conexion;
+    
     public ConexionCRUD(){
         try{
             Class.forName(driverConector);
